@@ -277,7 +277,15 @@
       <li><span class="iconify" data-icon="logos:python" data-inline="false"></span></li>
       <li><span class="iconify" data-icon="logos:html5" data-inline="false"></span></li>
     </ul>
-    <p>Developed an HMI for a reflow oven, displaying sensor and thermistor values, utilizing PID control for temperature calibration, and implementing UART, SPI, and I2C for data transmission between STM32 and sensors.</p>
+    <p>
+      <li>Developed HMI using Nextion Editor to display sensor and thermistor values.</li>
+      <li>Programming PID control systems for temperature sensing and calibration.</li>
+      <li>Communication protocols (UART, SPI, I2C) for data transmission between STM32 and other components.</li>
+      <li>Controlling the Reflow Oven temperature using relay modules.</li>
+      <li>Create web interface to control and monitor embedded systems using ASYNC Web Server, REST API.</li>
+      <li>Utilized AJAX and Fetch API for asynchronous data retrieval from the ESP32.</li>
+
+    </p>
     <div class="project-links">
       <a href="https://github.com/GoomerJaspartap/ReflowOven" class="btn-blue-outline btn-small" target="_blank"> <i class="fab fa-github"></i> Code</a>
     </div>
@@ -297,7 +305,14 @@
       <li><span class="iconify" data-icon="simple-icons:html5" data-inline="false"></span></li>
       <li><span class="iconify" data-icon="simple-icons:css3" data-inline="false"></span></li>
     </ul>
-    <p>Designed an ESP32-based dashboard for a racing car to display real-time data from the car's ECU, including speed, battery temperature, and torque, with a web interface for remote access and monitoring.</p>
+    <p>
+      <li>Developed HMI using Nextion Editor to display vital information like speed, torque, battery temp, battery voltage, gyroscope, GPS.</li>
+      <li>Designed an ESP32-based dashboard that receives sensor data from the car's ECU using CAN BUS.</li>
+      <li>Create web interface to monitor Car data using ASYNC Web Server, REST API.</li>
+      <li>Utilized AJAX and Fetch API for asynchronous data retrieval from the ESP32.</li>
+
+
+    </p>
     <div class="project-links">
       <a href="https://github.com/GoomerJaspartap/OTR-DASH" class="btn-blue-outline btn-small" target="_blank"> <i class="fab fa-github"></i> Code</a>
     </div>
@@ -309,41 +324,80 @@
     <img src="src/img/CameraGimbal.png" alt="">
   </div>
   <div class="project-right">
-    <h3>Camera Gimbal</h3>
+    <h3>Pan Tilt Mount</h3>
     <ul class="tech-stack-list">
       <p class="text-grey"><b>Made with: </b></p>
       <li><span class="iconify" data-icon="logos:python" data-inline="false"></span></li>
       <li><span class="iconify" data-icon="logos:opencv" data-inline="false"></span></li>
       <li><span class="iconify" data-icon="logos:esp32" data-inline="false"></span></li>
     </ul>
-    <p>Developed a tracking system to keep the user centered in the frame by controlling a camera gimbal, using OpenCV for object detection and tracking, with servo control through UART communication with an ESP32.</p>
+    <p>
+      <li>Developed a tracking system that tracks the high power rocket for a launch video using live data from Avionics bay.</li>
+      <li>Avionics bay transmits the data using LORA modules.</li>
+      <li>The mount gets the altitude gps and speed data and positions itself to record the launch.</li>
+      <li>Using stepper motors to rotate the mount.</li>
+      <li>Using hall effect sensor to find the rest position of the mount.</li>
+    </p>
     <div class="project-links">
       <a href="https://github.com/GoomerJaspartap/CameraGimbal" class="btn-blue-outline btn-small" target="_blank"> <i class="fab fa-github"></i> Code</a>
     </div>
   </div>
 </div>
 
-<div class="project-row" data-aos="fade-up">
+
+    
+
+        <div class="project-row" data-aos="fade-up">
   <div class="project-left">
-    <img src="src/img/SpamDetector.png" alt="">
+    <img src="src/img/ECU.png" alt="">
   </div>
   <div class="project-right">
-    <h3>Spam Email Detector</h3>
+    <h3>ECU</h3>
     <ul class="tech-stack-list">
       <p class="text-grey"><b>Made with: </b></p>
-      <li><span class="iconify" data-icon="logos:python" data-inline="false"></span></li>
-      <li><span class="iconify" data-icon="logos:html5" data-inline="false"></span></li>
-      <li><span class="iconify" data-icon="logos:glassfish" data-inline="false"></span></li>
+<li><span class="iconify" data-icon="logos:matlab" data-inline="false"></span></li>
+<li><span class="iconify" data-icon="logos:simulink" data-inline="false"></span></li>
+<li><span class="iconify" data-icon="logos:can-bus" data-inline="false"></span></li>
+<li><span class="iconify" data-icon="logos:dbc" data-inline="false"></span></li>
+<li><span class="iconify" data-icon="logos:odin" data-inline="false"></span></li>
     </ul>
-    <p>Trained a model to detect spam emails with a 98% accuracy rate using probability algorithms, and developed a web interface using REST API on a GlassFish server for practical application.</p>
+    <p>
+      <li>Developing an ECU system to process analog signals from linear potentiometers, converting them into pedal position percentage for motor control.</li>
+      <li>Implementing CAN BUS communication to interface with the car’s Data Acquisition System (DAQ), ECU, and AMS for real-time data exchange.</li>
+      <li>Designing and refining a DBC file for CAN messages, structuring message IDs for a priority-based system.</li>
+      <li>Ensuring compliance with FSAE safety regulations, integrating driver safety checks before motor activation.</li>
+      <li>Continuously optimizing firmware for accurate signal conversion, transmission, and real-time monitoring of pedal positions.</li>
+    </p>
     <div class="project-links">
-      <a href="https://github.com/GoomerJaspartap/SpamDetector" class="btn-blue-outline btn-small" target="_blank"> <i class="fab fa-github"></i> Code</a>
+    
     </div>
   </div>
 </div>
 
-    
+        
+        <div class="project-row" data-aos="fade-up">
+  <div class="project-left">
+    <img src="src/img/Buzzer.png" alt="">
+  </div>
+  <div class="project-right">
+    <h3>Buzz Me In</h3>
+    <ul class="tech-stack-list">
+      <p class="text-grey"><b>Made with: </b></p>
+<li><span class="iconify" data-icon="logos:esp32" data-inline="false"></span></li>
+<li><span class="iconify" data-icon="logos:arduino" data-inline="false"></span></li>
+<li><span class="iconify" data-icon="logos:blynk" data-inline="false"></span></li>
+<li><span class="iconify" data-icon="logos:iot" data-inline="false"></span>
+    </ul>
+    <p>
+      <li>Programmed an ESP32 to control a servo motor, manipulating its angle to press a button and then return to the resting position.</li>
+      <li>Integrated with the Blynk IoT platform, enabling control and monitoring from anywhere globally via a mobile app.</li>
+      <li>Demonstrated expertise in IoT development, real-time control systems, and software integration across platforms.</li>
+    </p>
+    <div class="project-links">
 
+    </div>
+  </div>
+</div>
     
       </div>
     </section>
