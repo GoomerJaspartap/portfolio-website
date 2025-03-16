@@ -167,15 +167,12 @@
             <h4>Embedded Systems Lead - Ontario Tech Racing</h4>
            
             <ul>
-       <li>Manage a team of undergraduate students in field of Embedded Systems and Firmware Design.</li>
-       <li>Develop HMI using Nextion Editor for a reflow oven to display sensor and thermistor values.</li>
-       <li>Programming PID control systems for temperature sensing and calibration.</li>
-       <li>Create web interface to control and monitor embedded systems.</li>
-       <li>Design HMI dashboard with Nextion Editor and ESP32, integrating values from car's ECU using CAN BUS and enabling remote access via web interface</li>
-       <li>Developed firmware for ECU, AMS & BMS using Simulink and C++, ensuring real-time processing of sensor data.</li>
-       <li>Designed CAN BUS architecture, creating Database Container (DBC) files to prioritize message exchange.</li>
-       <li>Conducted integration testing for ECU firmware, troubleshooting issues at the system level.</li>
-       <li>Worked cross-functionally with mechanical and electrical engineers to refine drive system firmware.</li>
+       <li>Led a team of 6; organized meetings, built Notion workspaces, defined documentation structure, coding standards, and naming conventions.</li>
+<li>Developed the ECU in Simulink for Dana TM4 Neuro 200; processed throttle and brake analog signals using linear mapping and sent control commands via CAN bus.</li>
+<li>Created CAN DBC files with prioritized structured messages; implemented stateflow logic for critical safety checks to initiate emergency shutdown.</li>
+<li>Debugged and tested ECU and AMS software; AMS monitors cell voltages, current, and temperature using NXP and triggers shutdown/balancing based on thresholds.</li>
+<li>Built dashboard using Nextion display and ESP32; fetched CAN data from ECU, displayed it locally and over Wi-Fi using Async Web Server, REST API, and AJAX.</li>
+<li>Verified analog and CAN signals using oscilloscope; used Kvaser Leaf Light and BusMaster to monitor, debug, and validate CAN communication.</li>
 
             </ul>
           </div>
@@ -194,13 +191,11 @@
             <h4>Software Engineer - Ontario Tech Space and Rocketry</h4>
            
             <ul>
-<li>Develop an innovative rocket camera gimbal system, integrating real-time data processing from gyro, accelerometer, and GPS sensors from the avionics bay to dynamically adjust the camera's orientation.</li>
-<li>Implement pan-tilt mount control systems for precise camera tracking during flight, enhancing telemetry and visual data analysis capabilities.</li>
-<li>Design robust data pipelines for seamless communication between the ground station and onboard systems using UART, SPI, and I2C protocols.</li>
-<li>Leverage embedded platforms such as STM32 & ESP32 to prototype and test hardware-software integration.</li>
-<li>Employ industry-standard practices for PID control system design to ensure accurate and responsive gimbal stabilization.</li>
-<li>ocument development processes and collaborating through GitHub for version control and team-based development.</li>
-<li>Enhance expertise in real-time operating system (RTOS), low-power AI solutions, and hardware interfacing to optimize system performance.</li>
+<li>Designed and built a camera mount tracking system using GPS and altitude data from the avionics bay, received via RFD900ux transceiver.</li>
+<li>Parsed live telemetry data to calculate vector from mount to rocket in real-time; adjusted mount orientation accordingly using two 3D printer stepper motors.</li>
+<li>Controlled the tracking system with an Arduino Nano and used a Hall effect sensor for initial camera position calibration and feedback.</li>
+<li>Enabled automated launch tracking and video capture by synchronizing mount motion with rocket trajectory.</li>
+<li>Contributed to design improvements for Flare ground station software; implemented GPS plotting and enhanced live telemetry visualization.</li>
 
 
             </ul>
@@ -219,12 +214,11 @@
             <h4>Software Team Lead - Aerecon</h4>
            
             <ul>
-              <li>	Team Lead for the software department, focusing on camera footage recording and processing, motor control and stability.</li>
-              <li>	Designed and implemented an object detection system using YOLO and OpenCV, enabling real-time detection and recognition.</li>
-              <li>	Established a server-based access system for the camera, allowing remote monitoring and control.</li>
-              <li>	Build a comprehensive website to showcase features and functionalities.</li>
-              <li>	Managed version control and collaborative development through GitHub.</li>
-              <li>	Utilized STM32, ESP32, Raspberry Pi CM4 and Arduino platforms for prototyping and integration of sensors.</li>
+             <li>Developed an object and face detection system using TensorFlow and YOLO; processed live footage from ESP32-Wrover-CAM and recorded video via Raspberry Pi.</li>
+<li>Integrated Neo M9N GPS module and parsed NMEA format data for real-time position tracking.</li>
+<li>Calibrated and used MPU6050 IMU for orientation; transmitted data via nRF24 and visualized drone orientation and acceleration using custom Python scripts.</li>
+<li>Controlled brushless motors using PWM signals with ESCs; implemented PID control loop for flight stabilization.</li>
+<li>Prototyped control and communication systems using STM32 F446RE and ESP32 for modular drone system development.</li>
 
            
             </ul>
@@ -255,9 +249,11 @@
       <li><span class="iconify" data-icon="simple-icons:tkinter" data-inline="false"></span></li>
       <li><span class="iconify" data-icon="simple-icons:yolo" data-inline="false"></span></li>
     </ul>
-    <li>Created a GUI application using Python and tkinter library.</li>
-    <li>Created and a face and object detection system using YOLO, Tensorflow and OpenCV
-</li></p>
+    <li>Built a 2-axis camera gimbal system using ESP32 and servo motors to track and center a user in the video frame.</li>
+<li>Developed a Python script with a PID control loop to calculate positional error and send servo commands to ESP32 via UART.</li>
+<li>Implemented real-time face and object detection using YOLO, TensorFlow, and OpenCV through a globally running Python process.</li>
+<li>Created a GUI application using Python and Tkinter for visualization and manual override of gimbal controls.</li>
+<li>Enabled automatic camera orientation adjustment based on real-time object positioning, achieving smooth and responsive tracking.</li></p>
     <div class="project-links">
       <a href="https://github.com/GoomerJaspartap/ComputerVision" class="btn-blue-outline btn-small" target="_blank"> <i class="fab fa-github"></i> Code</a>
     </div>
@@ -278,13 +274,12 @@
       <li><span class="iconify" data-icon="logos:html5" data-inline="false"></span></li>
     </ul>
     <p>
-      <li>Developed HMI using Nextion Editor to display sensor and thermistor values.</li>
-      <li>Programming PID control systems for temperature sensing and calibration.</li>
-      <li>Communication protocols (UART, SPI, I2C) for data transmission between STM32 and other components.</li>
-      <li>Controlling the Reflow Oven temperature using relay modules.</li>
-      <li>Create web interface to control and monitor embedded systems using ASYNC Web Server, REST API.</li>
-      <li>Utilized AJAX and Fetch API for asynchronous data retrieval from the ESP32.</li>
-
+      <li>Developed HMI using Nextion Editor to display live sensor and thermistor values.</li>
+<li>Programmed PID control system for accurate temperature sensing and calibration.</li>
+<li>Implemented UART, SPI, and I2C protocols for communication between STM32 and peripheral components.</li>
+<li>Controlled reflow oven temperature using relay modules driven by PID output.</li>
+<li>Built web interface using Async Web Server and REST API for remote control and monitoring via ESP32.</li>
+<li>Utilized AJAX and Fetch API for real-time, asynchronous data retrieval and display.</li>
     </p>
     <div class="project-links">
       <a href="https://github.com/GoomerJaspartap/ReflowOven" class="btn-blue-outline btn-small" target="_blank"> <i class="fab fa-github"></i> Code</a>
@@ -306,11 +301,10 @@
       <li><span class="iconify" data-icon="simple-icons:css3" data-inline="false"></span></li>
     </ul>
     <p>
-      <li>Developed HMI using Nextion Editor to display vital information like speed, torque, battery temp, battery voltage, gyroscope, GPS.</li>
-      <li>Designed an ESP32-based dashboard that receives sensor data from the car's ECU using CAN BUS.</li>
-      <li>Create web interface to monitor Car data using ASYNC Web Server, REST API.</li>
-      <li>Utilized AJAX and Fetch API for asynchronous data retrieval from the ESP32.</li>
-
+      <li>Developed HMI using Nextion Editor to display speed, torque, battery temperature, voltage, gyroscope, and GPS coordinates.</li>
+<li>Designed an ESP32-based dashboard that receives real-time sensor data from the car’s ECU via CAN bus.</li>
+<li>Built a web interface using Async Web Server and REST API to monitor vehicle data remotely.</li>
+<li>Implemented AJAX and Fetch API for real-time, asynchronous data updates from the ESP32.</li>
 
     </p>
     <div class="project-links">
@@ -327,11 +321,10 @@
     <h3>Pan Tilt Mount</h3>
     
     <p>
-      <li>Developed a tracking system that tracks the high power rocket for a launch video using live data from Avionics bay.</li>
-      <li>Avionics bay transmits the data using LORA modules.</li>
-      <li>The mount gets the altitude gps and speed data and positions itself to record the launch.</li>
-      <li>Using stepper motors to rotate the mount.</li>
-      <li>Using hall effect sensor to find the rest position of the mount.</li>
+     <li>Built GPS-based tracking mount to follow rocket trajectory using real-time data from avionics bay via RFD900ux.</li>
+<li>Parsed telemetry data and calculated vector from mount to rocket based on GPS and altitude.</li>
+<li>Controlled 2-axis movement using stepper motors and Arduino Nano; used Hall effect sensor for position calibration.</li>
+<li>Enabled autonomous tracking and video capture of full rocket launch.</li>
     </p>
     <div class="project-links">
       <a href="https://github.com/GoomerJaspartap/CameraGimbal" class="btn-blue-outline btn-small" target="_blank"> <i class="fab fa-github"></i> Code</a>
@@ -351,11 +344,11 @@
 
       
     <p>
-      <li>Developing an ECU system to process analog signals from linear potentiometers, converting them into pedal position percentage for motor control.</li>
-      <li>Implementing CAN BUS communication to interface with the car’s Data Acquisition System (DAQ), ECU, and AMS for real-time data exchange.</li>
-      <li>Designing and refining a DBC file for CAN messages, structuring message IDs for a priority-based system.</li>
-      <li>Ensuring compliance with FSAE safety regulations, integrating driver safety checks before motor activation.</li>
-      <li>Continuously optimizing firmware for accurate signal conversion, transmission, and real-time monitoring of pedal positions.</li>
+     <li>Developed ECU model in Simulink for Dana TM4 Neuro 200.</li>
+<li>Mapped throttle and brake analog inputs using linear equations (y = mx + b) to output percentage values.</li>
+<li>Sent control commands to the inverter via CAN bus; created structured DBC files to prioritize messages.</li>
+<li>Implemented safety checks using Stateflow to trigger emergency shutdowns under fault conditions.</li>
+<li>Verified analog and CAN signals using an oscilloscope; debugged CAN communication using Kvaser Leaf Light and BusMaster.</li>
     </p>
     <div class="project-links">
     
@@ -372,9 +365,11 @@
     <h3>Buzz Me In</h3>
  
       
-      <li>Programmed an ESP32 to control a servo motor, manipulating its angle to press a button and then return to the resting position.</li>
-      <li>Integrated with the Blynk IoT platform, enabling control and monitoring from anywhere globally via a mobile app.</li>
-      <li>Demonstrated expertise in IoT development, real-time control systems, and software integration across platforms.</li>
+     <li>Programmed ESP32 to control a servo motor, rotating from 90° to 32° to physically press a button in response to a buzzer sound or remote command.</li>
+<li>Integrated analog sound sensor to detect buzzer activation and trigger servo movement automatically.</li>
+<li>Connected system to Blynk IoT platform for global remote access and manual control via mobile app.</li>
+<li>Enabled real-time control and monitoring of physical access using both sound-based automation and internet-based interaction.</li>
+<li>Demonstrated skills in embedded system development, sensor integration, and IoT-based automation.</li>
     </p>
     <div class="project-links">
 
