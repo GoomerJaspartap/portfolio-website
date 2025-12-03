@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Jaspartap Goomer - Embedded Firmware Engineer skilled in C/C++, microcontroller programming, and real-time systems">
+    <meta name="keywords" content="Embedded Systems, Firmware Engineer, C/C++, STM32, ESP32, RTOS, IoT">
+    <meta name="author" content="Jaspartap Goomer">
+    <title>Jaspartap Goomer | Embedded Firmware Engineer</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- EmailJS SDK -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("HxVIps9qGv8J28iA9");
+        })();
+    </script>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo">JG</a>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <button class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <p class="hero-subtitle">Hi, my name is</p>
+                <h1 class="hero-title glitch" data-text="Jaspartap Goomer">Jaspartap Goomer</h1>
+                <p class="hero-description">
+                    Embedded Firmware Engineer skilled in C/C++, microcontroller programming, hardware communication
+                    protocols, and low-level debugging.
+                    Passionate about developing efficient, reliable firmware for real-time and hardware-integrated
+                    systems.
+                </p>
+                <div class="hero-cta">
+                    <a href="#contact" class="btn btn-primary">Get In Touch</a>
+                    <a href="#projects" class="btn btn-secondary">View My Work</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2 class="fade-in">About Me</h2>
+                    <p class="fade-in">
+                        I'm a Computer Science student at Ontario Tech University with a deep passion for embedded
+                        systems and firmware development.
+                        Currently pursuing my BSc (expected May 2027), I specialize in creating robust, real-time
+                        solutions for hardware-integrated systems.
+                    </p>
+                    <p class="fade-in">
+                        My experience spans across multiple domains including automotive systems (Formula SAE),
+                        aerospace (rocketry),
+                        and autonomous systems (drone design). I thrive on the challenge of optimizing low-level code
+                        and implementing
+                        complex communication protocols like CAN, SPI, I2C, and Modbus.
+                    </p>
+                    <p class="fade-in">
+                        When I'm not coding firmware, you'll find me leading embedded teams, collaborating on technical
+                        inspections,
+                        or building innovative IoT solutions that bridge the gap between hardware and software.
+                    </p>
+
+                    <div class="about-stats">
+                        <div class="stat-item glass-card fade-in">
+                            <div class="stat-number">4+</div>
+                            <div class="stat-label">Active Projects</div>
+                        </div>
+                        <div class="stat-item glass-card fade-in">
+                            <div class="stat-number">3</div>
+                            <div class="stat-label">Leadership Roles</div>
+                        </div>
+                        <div class="stat-item glass-card fade-in">
+                            <div class="stat-number">10+</div>
+                            <div class="stat-label">Technologies</div>
+                        </div>
+                        <div class="stat-item glass-card fade-in">
+                            <div class="stat-number">2027</div>
+                            <div class="stat-label">Expected Graduation</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-image fade-in">
+                    <div class="glass-card"
+                        style="height: 100%; min-height: 400px; display: flex; align-items: center; justify-content: center;">
+                        <i class="fas fa-microchip"
+                            style="font-size: 8rem; color: var(--color-accent-cyan); opacity: 0.3;"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills" id="skills">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: var(--spacing-lg);" class="fade-in">Skills & Technologies</h2>
+
+            <div class="skills-grid">
+                <div class="skill-category glass-card fade-in">
+                    <h3><i class="fas fa-code"></i> Programming & Development</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Java</span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">C++</span>
+                        <span class="skill-tag">C</span>
+                        <span class="skill-tag">HTML/CSS</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">RTOS</span>
+                        <span class="skill-tag">Glassfish Server</span>
+                    </div>
+                </div>
+
+                <div class="skill-category glass-card fade-in">
+                    <h3><i class="fas fa-microchip"></i> Embedded Systems</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">STM32</span>
+                        <span class="skill-tag">ESP32</span>
+                        <span class="skill-tag">Raspberry Pi</span>
+                        <span class="skill-tag">Arduino</span>
+                        <span class="skill-tag">Linux</span>
+                        <span class="skill-tag">CANDB++</span>
+                        <span class="skill-tag">BUS Master</span>
+                    </div>
+                </div>
+
+                <div class="skill-category glass-card fade-in">
+                    <h3><i class="fas fa-tools"></i> Software & Tools</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Eclipse</span>
+                        <span class="skill-tag">MATLAB/Simulink</span>
+                        <span class="skill-tag">VS Code</span>
+                        <span class="skill-tag">GitHub</span>
+                        <span class="skill-tag">IntelliJ</span>
+                        <span class="skill-tag">Arduino IDE</span>
+                        <span class="skill-tag">Cube IDE</span>
+                        <span class="skill-tag">CubeMX</span>
+                        <span class="skill-tag">Microsoft Office</span>
+                    </div>
+                </div>
+
+                <div class="skill-category glass-card fade-in">
+                    <h3><i class="fas fa-database"></i> Data & Analysis</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">NumPy</span>
+                        <span class="skill-tag">pandas</span>
+                        <span class="skill-tag">Matplotlib</span>
+                        <span class="skill-tag">Logic Analyzer</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="experience" id="experience">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: var(--spacing-lg);" class="fade-in">Work Experience</h2>
+
+            <div class="experience-timeline">
+                <!-- Ontario Tech ACE -->
+                <div class="experience-item glass-card fade-in">
+                    <div class="experience-header">
+                        <div class="experience-header-content">
+                            <img src="img/OTU-Logo.png" alt="Ontario Tech Logo" class="experience-logo">
+                            <div>
+                                <h3 class="experience-title">Engineering Student</h3>
+                                <p class="experience-company">Ontario Tech University ACE (Automotive Center of
+                                    Excellence)</p>
+                            </div>
+                        </div>
+                        <span class="experience-date">May 2025 – Present</span>
+                    </div>
+                    <ul class="experience-description">
+                        <li>Designed a diagnostic controller to validate temperature/humidity against time-based
+                            thresholds using Modbus TCP/IP and MQTT</li>
+                        <li>Developed a Python + Flask API with retry logic and a real-time web dashboard (HTML/CSS/JS)
+                            for monitoring, configuration, and control</li>
+                        <li>Integrated fault-detection logic with automated SMS/email alerting for critical conditions
+                        </li>
+                        <li>Prepared detailed software validation test plans covering threshold logic, communication
+                            paths, alert triggers, and system reliability</li>
+                    </ul>
+                </div>
+
+                <!-- Ontario Tech Racing -->
+                <div class="experience-item glass-card fade-in">
+                    <div class="experience-header">
+                        <div class="experience-header-content">
+                            <img src="img/OTR.png" alt="Ontario Tech Racing Logo" class="experience-logo">
+                            <div>
+                                <h3 class="experience-title">Embedded Systems Lead</h3>
+                                <p class="experience-company">Ontario Tech Racing (Formula SAE Team)</p>
+                            </div>
+                        </div>
+                        <span class="experience-date">Sept 2024 – Present</span>
+                    </div>
+                    <ul class="experience-description">
+                        <li>Lead a 6-member embedded team; define coding/documentation standards, development workflows,
+                            and train/onboard new firmware contributors</li>
+                        <li>Develop ECU firmware in Simulink (Stateflow + Embedded Coder), implementing CAN-based
+                            throttle/brake mapping, custom DBCs, and shutdown-circuit/safety-state logic</li>
+                        <li>Implement BMS firmware in C/C++ for Analog Devices LTC6813-1: isoSPI communication,
+                            cell/temperature acquisition, PEC/open-wire diagnostics, OV/UV/OT/UT fault handling, and
+                            passive cell-balancing control</li>
+                        <li>Validate ECU and AMS software for HV safety, enabling deterministic monitoring of cell
+                            voltages, pack current, thermistors, and automated fault-triggered shutdown sequences</li>
+                        <li>Build on-car (ESP32 + HMI) and cloud (Firebase + TypeScript) telemetry stacks delivering
+                            real-time battery, performance, and GPS data with integrated fault detection</li>
+                        <li>Collaborate with Vehicle Dynamics and HV Systems on telemetry/BMS integration and represent
+                            Embedded Systems during FSAE Michigan technical inspections</li>
+                    </ul>
+                </div>
+
+                <!-- Aerecon Drone Design -->
+                <div class="experience-item glass-card fade-in">
+                    <div class="experience-header">
+                        <div class="experience-header-content">
+                            <img src="img/Aerecon.png" alt="Aerecon Logo" class="experience-logo">
+                            <div>
+                                <h3 class="experience-title">Software Lead</h3>
+                                <p class="experience-company">Aerecon Drone Design Team</p>
+                            </div>
+                        </div>
+                        <span class="experience-date">Nov 2024 – Present</span>
+                    </div>
+                    <ul class="experience-description">
+                        <li>Implemented PID-based flight stabilization for brushless motors using PWM-driven ESCs, with
+                            orientation feedback from an IMU transmitted via wireless link</li>
+                        <li>Developed Python visualization tools for real-time orientation/acceleration data and
+                            integrated GPS for NMEA-based position tracking</li>
+                        <li>Engineered a computer vision pipeline on Raspberry Pi using TensorFlow + YOLO for
+                            object/face detection from onboard camera streams</li>
+                    </ul>
+                </div>
+
+                <!-- Space and Rocketry -->
+                <div class="experience-item glass-card fade-in">
+                    <div class="experience-header">
+                        <div class="experience-header-content">
+                            <img src="img/OTSR.png" alt="OTSR Logo" class="experience-logo">
+                            <div>
+                                <h3 class="experience-title">Software Engineer</h3>
+                                <p class="experience-company">Ontario Tech Space and Rocketry</p>
+                            </div>
+                        </div>
+                        <span class="experience-date">Nov 2024 – June 2025</span>
+                    </div>
+                    <ul class="experience-description">
+                        <li>Developed embedded firmware on STM32 microcontroller for real-time rocket tracking,
+                            integrating an IMU for orientation, a barometer for altitude, and flash memory for high-rate
+                            data logging</li>
+                        <li>Engineered a camera mount with dual-servo actuation and computer vision, enabling automated
+                            tracking to keep rockets centered in frame during launch</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects" id="projects">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: var(--spacing-lg);" class="fade-in">Featured Projects</h2>
+
+            <div class="projects-grid">
+                <!-- Reflow Oven -->
+                <div class="project-card glass-card fade-in">
+                    <img src="img/ReflowOven.png" alt="Reflow Oven" class="project-image">
+                    <div class="project-header">
+                        <div class="project-icon">🔥</div>
+                        <div class="project-links">
+                            <a href="#" class="project-link" title="GitHub"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <h3 class="project-title">Reflow Oven Controller</h3>
+                    <ul class="project-description-list">
+                        <li>Developed a Human-Machine Interface (HMI) using Nextion Editor to display real-time
+                            thermistor readings and oven status.</li>
+                        <li>Implemented proportional-only control logic on STM32 to regulate oven temperature; tuned
+                            on/off switching behavior to maintain ±3°C accuracy using relay-driven heating.</li>
+                        <li>Integrated UART, SPI, and I2C communication protocols for reliable data exchange between
+                            STM32, sensors, and actuators.</li>
+                        <li>Controlled reflow oven temperature using relay modules driven by PID output.</li>
+                        <li>Developed a responsive web interface using Async Web Server and REST API on ESP32 for remote
+                            monitoring and control of the reflow process.</li>
+                    </ul>
+                    <div class="project-tech">
+                        <span class="tech-tag">STM32</span>
+                        <span class="tech-tag">ESP32</span>
+                        <span class="tech-tag">UART/SPI/I2C</span>
+                        <span class="tech-tag">PID Control</span>
+                        <span class="tech-tag">REST API</span>
+                    </div>
+                </div>
+
+                <!-- FSAE Dashboard -->
+                <div class="project-card glass-card fade-in">
+                    <img src="img/OTR-DASH.png" alt="FSAE Dashboard" class="project-image">
+                    <div class="project-header">
+                        <div class="project-icon">🏎️</div>
+                        <div class="project-links">
+                            <a href="#" class="project-link" title="GitHub"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <h3 class="project-title">FSAE Car Dashboard</h3>
+                    <ul class="project-description-list">
+                        <li>Developed HMI to display speed, torque, battery temperature, voltage, gyroscope, and GPS
+                            coordinates.</li>
+                        <li>Designed an ESP32-based dashboard that receives real-time sensor data from the car’s ECU via
+                            CAN bus.</li>
+                        <li>Built a web interface using Async Web Server and REST API to monitor vehicle data remotely.
+                        </li>
+                        <li>Implemented AJAX and Fetch API for real-time, asynchronous data updates from the ESP32.</li>
+                    </ul>
+                    <div class="project-tech">
+                        <span class="tech-tag">ESP32</span>
+                        <span class="tech-tag">CAN Bus</span>
+                        <span class="tech-tag">HMI</span>
+                        <span class="tech-tag">AJAX</span>
+                        <span class="tech-tag">GPS</span>
+                    </div>
+                </div>
+
+                <!-- Buzz Me In -->
+                <div class="project-card glass-card fade-in">
+                    <img src="img/Buzzer.png" alt="Buzz Me In" class="project-image">
+                    <div class="project-header">
+                        <div class="project-icon">🔔</div>
+                        <div class="project-links">
+                            <a href="#" class="project-link" title="GitHub"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <h3 class="project-title">Buzz Me In - IoT Access System</h3>
+                    <ul class="project-description-list">
+                        <li>Programmed ESP32 to control a servo motor that physically pressed a button, triggered by
+                            either buzzer sound detection or remote user command.</li>
+                        <li>Integrated analog sound sensor to identify buzzer activation and initiate automated access
+                            response.</li>
+                        <li>Connected system to the Blynk IoT platform to enable real-time, remote control and status
+                            monitoring via mobile app.</li>
+                        <li>Built a dual-mode access automation system combining local sound-based triggers with
+                            cloud-connected IoT control for seamless interaction.</li>
+                    </ul>
+                    <div class="project-tech">
+                        <span class="tech-tag">ESP32</span>
+                        <span class="tech-tag">IoT</span>
+                        <span class="tech-tag">Blynk</span>
+                        <span class="tech-tag">Servo Control</span>
+                        <span class="tech-tag">Sound Detection</span>
+                    </div>
+                </div>
+
+                <!-- Computer Vision Gimbal -->
+                <div class="project-card glass-card fade-in">
+                    <img src="img/CameraGimbal.png" alt="Camera Gimbal" class="project-image">
+                    <div class="project-header">
+                        <div class="project-icon">📹</div>
+                        <div class="project-links">
+                            <a href="#" class="project-link" title="GitHub"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <h3 class="project-title">Computer Vision Camera Gimbal</h3>
+                    <ul class="project-description-list">
+                        <li>Designed a real-time camera gimbal system with auto-tracking functionality, using a PID
+                            control loop to center subjects in the video frame based on facial and object recognition.
+                        </li>
+                        <li>Integrated YOLO and OpenCV in a continuously running Python process to detect faces and
+                            calculate positional error relative to frame center.</li>
+                        <li>Transmitted control signals over UART to a 2-axis gimbal, enabling responsive servo-based
+                            orientation adjustments.</li>
+                        <li>Built a Tkinter-based GUI for manual override and real-time tracking visualization,
+                            supporting user interaction and tuning.</li>
+                        <li>Achieved smooth, automated object tracking with minimal overshoot, improving target
+                            stability and real-time response during motion.</li>
+                    </ul>
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">YOLO</span>
+                        <span class="tech-tag">OpenCV</span>
+                        <span class="tech-tag">PID Control</span>
+                        <span class="tech-tag">UART</span>
+                        <span class="tech-tag">Tkinter</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="contact-content">
+                <h2 class="fade-in">Get In Touch</h2>
+                <p class="fade-in">
+                    I'm currently seeking opportunities in embedded firmware engineering and real-time systems
+                    development.
+                    Whether you have a question, want to collaborate, or just want to say hi, feel free to reach out!
+                </p>
+
+                <form id="contact-form" class="contact-form fade-in">
+                    <div class="form-group">
+                        <input type="text" name="user_name" id="user_name" placeholder="Your Name" required
+                            class="form-input">
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="user_email" id="user_email" placeholder="Your Email" required
+                            class="form-input">
+                    </div>
+                    <div class="form-group">
+                        <textarea name="message" id="message" placeholder="Your Message" required
+                            class="form-input form-textarea"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                    <div id="status" style="margin-top: 1rem; font-weight: 500;"></div>
+                </form>
+
+                <div class="social-links">
+                    <a href="mailto:jaspartapgoomer@gmail.com" class="social-link fade-in" title="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/jaspartapgoomer/" target="_blank" class="social-link fade-in"
+                        title="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://github.com/GoomerJaspartap" target="_blank" class="social-link fade-in"
+                        title="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="tel:+19052263054" class="social-link fade-in" title="Phone">
+                        <i class="fas fa-phone"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Jaspartap Goomer. Built with passion for embedded systems.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+
+</html>
