@@ -9,11 +9,14 @@ async function captureScreenshots() {
   });
 
   const screenshots = [
-    { width: 1440, name: 'screenshot-desktop-1440-updated.png', url: 'http://localhost:4321/' },
-    { width: 360, name: 'screenshot-mobile-360-updated.png', url: 'http://localhost:4321/' }
+    { width: 360, name: 'final-mobile-360px.png', url: 'http://localhost:4321/' },
+    { width: 640, name: 'final-tablet-640px.png', url: 'http://localhost:4321/' },
+    { width: 1024, name: 'final-laptop-1024px.png', url: 'http://localhost:4321/' },
+    { width: 1440, name: 'final-desktop-1440px.png', url: 'http://localhost:4321/' },
+    { width: 1440, name: 'final-bms-case-study.png', url: 'http://localhost:4321/projects/bms' }
   ];
 
-  const outputDir = '/workspace/portfolio';
+  const outputDir = '/workspace/.github/pr-screenshots';
 
   for (const config of screenshots) {
     const page = await browser.newPage();
@@ -42,12 +45,12 @@ async function captureScreenshots() {
       fullPage: true
     });
 
-    console.log(`Saved ${config.name}`);
+    console.log(`✓ Saved ${config.name}`);
     await page.close();
   }
 
   await browser.close();
-  console.log('Updated screenshots captured successfully!');
+  console.log('\n✅ All final screenshots captured successfully!');
 }
 
 captureScreenshots().catch(console.error);
