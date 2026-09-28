@@ -1,43 +1,34 @@
-# Astro Starter Kit: Minimal
+# jaspartapgoomer.com
+
+Personal site for Jaspartap Goomer, a computer science student at Ontario Tech University and an embedded and systems software engineer. It is a static [Astro](https://astro.build) build of the blueprint-and-terminal design, published at [www.jaspartapgoomer.com](https://www.jaspartapgoomer.com).
+
+## Requirements
+
+Node.js **22.12.0 or newer**. `package.json` sets `engines.node` to `>=22.12.0`. The GitHub Actions workflow installs Node 22 (current 22.x), not Node 20.
+
+## Run locally
 
 ```sh
-npm create astro@latest -- --template minimal
+npm ci
+npm run dev
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+The dev server defaults to `http://localhost:4321`.
 
-## 🚀 Project Structure
+## Build
 
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
+```sh
+npm ci
+npm run build
+npm run preview
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+`npm run build` writes the static site to `dist/`. `npm run preview` serves that folder.
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+## Deploy
 
-Any static assets, like images, can be placed in the `public/` directory.
+`.github/workflows/deploy.yml` runs on pushes to `master`. It installs dependencies with `npm ci`, builds with `npm run build`, and deploys `dist/` to GitHub Pages.
 
-## 🧞 Commands
+The live site still publishes the files at the root of `master` (`index.html`, `style.css`, `script.js`, and `img/`) until GitHub Pages is switched to the **GitHub Actions** source. Those root files, and the root `CNAME`, stay in this branch so merging does not blank the current site. After the source is switched to Actions, the workflow output is what visitors get.
 
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+`public/CNAME` is copied into `dist/` and keeps the custom domain `www.jaspartapgoomer.com`.
