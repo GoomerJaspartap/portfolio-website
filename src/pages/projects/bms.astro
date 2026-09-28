@@ -45,13 +45,10 @@ const lastUpdated = new Date().toLocaleDateString('en-US', { year: 'numeric', mo
       
       <div class="case-content">
         <p>
-          For Ontario Tech Racing's Formula SAE electric car, I developed firmware for the Analog Devices LTC6813-1 
-          battery management system that monitors and protects the high-voltage battery pack.
+          Firmware for the Analog Devices LTC6813-1 on Ontario Tech Racing's Formula SAE car.
         </p>
-        
         <p>
-          The BMS continuously monitors cell voltages and temperatures across the pack, performs passive cell balancing, 
-          and implements fault detection and error handling to ensure driver safety and component protection.
+          It monitors cell voltage and temperature, balances cells passively, and handles faults and errors.
         </p>
       </div>
     </section>
@@ -60,33 +57,22 @@ const lastUpdated = new Date().toLocaleDateString('en-US', { year: 'numeric', mo
       <h2><b>➜</b> cat implementation.txt</h2>
       
       <div class="case-content">
-        <h3>Cell Monitoring</h3>
+        <h3>Cell voltage and temperature</h3>
         <p>
-          Implemented continuous voltage and temperature acquisition for all cells in the pack. The microcontroller 
-          communicates with the LTC6813-1 via SPI through an isoSPI transceiver.
+          The microcontroller talks SPI to an isoSPI transceiver, which carries isoSPI to the LTC6813.
         </p>
         
-        <h3>Passive Cell Balancing</h3>
-        <p>
-          Developed algorithms to identify cell voltage imbalances and command the LTC6813-1's built-in discharge 
-          resistors to balance cells.
-        </p>
+        <h3>Passive cell balancing</h3>
+        <p>Passive cell balancing for the pack.</p>
         
-        <h3>Fault Detection & Error Handling</h3>
-        <p>
-          Built comprehensive error handling for overvoltage, undervoltage, overtemperature, and communication faults.
-        </p>
+        <h3>Fault and error handling</h3>
+        <p>Fault and error handling in the firmware.</p>
         
-        <h3>CAN Telemetry</h3>
-        <p>
-          Packaged cell voltages, temperatures, and fault status into CAN messages for the vehicle's ECU and dashboard.
-        </p>
+        <h3>Telemetry over CAN</h3>
+        <p>Pack telemetry is sent over CAN.</p>
         
-        <h3>Testing & Validation</h3>
-        <p>
-          Verified firmware behavior through pytest-based Software-in-the-Loop (SIL) tests. Conducted Hardware-in-the-Loop (HIL) 
-          testing on bench setups with the actual LTC6813-1 hardware before integration onto the vehicle.
-        </p>
+        <h3>Debugging and testing</h3>
+        <p>Debugged and tested with pytest SIL tests and HIL benches.</p>
       </div>
     </section>
     
