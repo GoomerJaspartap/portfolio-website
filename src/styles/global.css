@@ -397,10 +397,12 @@ h2:after {
   }
   .tblk div {
     border-right: 1.5px solid rgba(255,255,255,.8);
-    border-bottom: 0;
   }
   .tblk div:nth-child(2n) {
     border-right: 0;
+  }
+  .tblk div:nth-child(n+3) {
+    border-bottom: 0;
   }
   .exps {
     grid-template-columns: 1fr;
@@ -464,6 +466,14 @@ h2:after {
   }
   .tblk {
     grid-template-columns: 1fr;
+  }
+  .tblk div,
+  .tblk div:nth-child(n+3) {
+    border-right: 0;
+    border-bottom: 1.5px solid rgba(255,255,255,.8);
+  }
+  .tblk div:last-child {
+    border-bottom: 0;
   }
   .grid {
     grid-template-columns: 1fr;
@@ -694,8 +704,6 @@ footer a:hover {
   aspect-ratio: 4 / 3;
   object-fit: cover;
   display: block;
-  filter: grayscale(1) brightness(1.1) sepia(1) hue-rotate(170deg) saturate(2.2);
-  mix-blend-mode: screen;
 }
 
 .case-caption {

@@ -1,4 +1,22 @@
 ---
+import { getImage } from 'astro:assets';
+import bms1 from '../assets/bms1.jpg';
+import bms2 from '../assets/bms2.jpg';
+import bms3 from '../assets/bms3.jpg';
+import bms4 from '../assets/bms4.jpg';
+import dash from '../assets/OTR-DASH.png';
+import ecu from '../assets/ECU.png';
+import oven from '../assets/ReflowOven.png';
+import gimbal from '../assets/CameraGimbal.png';
+
+const bms4img = await getImage({ src: bms4, format: 'webp', width: 1200 });
+const bms2img = await getImage({ src: bms2, format: 'webp', width: 800 });
+const bms3img = await getImage({ src: bms3, format: 'webp', width: 800 });
+const bms1img = await getImage({ src: bms1, format: 'webp', width: 800 });
+const dashImg = await getImage({ src: dash, format: 'webp', width: 640 });
+const ecuImg = await getImage({ src: ecu, format: 'webp', width: 640 });
+const ovenImg = await getImage({ src: oven, format: 'webp', width: 640 });
+const gimbalImg = await getImage({ src: gimbal, format: 'webp', width: 640 });
 ---
 
 <h2 id="projects"><b>➜</b> ls ./projects</h2>
@@ -6,10 +24,10 @@
 <!-- Featured BMS -->
 <div class="feat">
   <div class="gal">
-    <div class="img g1" style="background-image:url(/bms4_8e2d.jpg)"></div>
-    <div class="img g2" style="background-image:url(/bms2_dae8.jpg)"></div>
-    <div class="img g3" style="background-image:url(/bms3_3e09.jpg)"></div>
-    <div class="img g4" style="background-image:url(/bms1_6bb6.jpg)"></div>
+    <div class="img g1" style={`background-image:url(${bms4img.src})`}></div>
+    <div class="img g2" style={`background-image:url(${bms2img.src})`}></div>
+    <div class="img g3" style={`background-image:url(${bms3img.src})`}></div>
+    <div class="img g4" style={`background-image:url(${bms1img.src})`}></div>
   </div>
   <div class="fb">
     <div class="flag">FEATURED · FIG. 01</div>
@@ -36,7 +54,7 @@
 <!-- Other Projects Grid -->
 <div class="grid">
   <div class="proj">
-    <div class="img" style="background-image:url(/OTR-DASH.png)"></div>
+    <div class="img" style={`background-image:url(${dashImg.src})`}></div>
     <div class="pb">
       <h3>FSAE Car Telemetry</h3>
       <p>On-car ESP32 + HMI dashboard reading the ECU over CAN, plus Firebase + TypeScript cloud telemetry.</p>
@@ -49,7 +67,7 @@
   </div>
 
   <div class="proj">
-    <div class="img" style="background-image:url(/ECU.png)"></div>
+    <div class="img" style={`background-image:url(${ecuImg.src})`}></div>
     <div class="pb">
       <h3>ECU & BMS Simulation</h3>
       <p>Behavioural Simulink models for virtual testing, SIL validation and early fault discovery.</p>
@@ -62,7 +80,7 @@
   </div>
 
   <div class="proj">
-    <div class="img" style="background-image:url(/ReflowOven.png)"></div>
+    <div class="img" style={`background-image:url(${ovenImg.src})`}></div>
     <div class="pb">
       <h3>Reflow Oven Controller</h3>
       <p>STM32 control holding ±3°C with a Nextion HMI and ESP32 REST remote control.</p>
@@ -75,7 +93,7 @@
   </div>
 
   <div class="proj">
-    <div class="img" style="background-image:url(/CameraGimbal.png)"></div>
+    <div class="img" style={`background-image:url(${gimbalImg.src})`}></div>
     <div class="pb">
       <h3>CV Camera Gimbal</h3>
       <p>YOLO + OpenCV face tracking driving a 2-axis gimbal through a PID loop over UART.</p>

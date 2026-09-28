@@ -1,6 +1,19 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import Navigation from '../../components/Navigation.astro';
+import { getImage } from 'astro:assets';
+import bms1 from '../../assets/bms1.jpg';
+import bms2 from '../../assets/bms2.jpg';
+import bms3 from '../../assets/bms3.jpg';
+import bms4 from '../../assets/bms4.jpg';
+
+const shots = await Promise.all([
+  getImage({ src: bms4, format: 'webp', width: 1200 }),
+  getImage({ src: bms2, format: 'webp', width: 1200 }),
+  getImage({ src: bms3, format: 'webp', width: 1200 }),
+  getImage({ src: bms1, format: 'webp', width: 1200 }),
+]);
+const [shot4, shot2, shot3, shot1] = shots;
 
 const lastUpdated = new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
 ---
@@ -81,19 +94,19 @@ const lastUpdated = new Date().toLocaleDateString('en-US', { year: 'numeric', mo
       
       <div class="case-gallery">
         <div class="case-img-wrap">
-          <img src="/bms4_8e2d.jpg" alt="BMS board on the pack" width="1200" height="900" loading="lazy" />
+          <img src={shot4.src} alt="BMS board on the pack" width={shot4.attributes.width} height={shot4.attributes.height} loading="lazy" />
           <div class="case-caption">BMS board on the pack</div>
         </div>
         <div class="case-img-wrap">
-          <img src="/bms2_dae8.jpg" alt="BMS board detail" width="1200" height="900" loading="lazy" />
+          <img src={shot2.src} alt="BMS board detail" width={shot2.attributes.width} height={shot2.attributes.height} loading="lazy" />
           <div class="case-caption">BMS board detail</div>
         </div>
         <div class="case-img-wrap">
-          <img src="/bms3_3e09.jpg" alt="BMS board on the pack" width="1200" height="900" loading="lazy" />
+          <img src={shot3.src} alt="BMS board on the pack" width={shot3.attributes.width} height={shot3.attributes.height} loading="lazy" />
           <div class="case-caption">BMS board on the pack</div>
         </div>
         <div class="case-img-wrap">
-          <img src="/bms1_6bb6.jpg" alt="BMS board detail" width="1200" height="900" loading="lazy" />
+          <img src={shot1.src} alt="BMS board detail" width={shot1.attributes.width} height={shot1.attributes.height} loading="lazy" />
           <div class="case-caption">BMS board detail</div>
         </div>
       </div>
