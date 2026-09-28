@@ -1,75 +1,19 @@
 ---
 ---
 
-<section id="about" class="max-w-[1100px] mx-auto px-6 sm:px-10 py-16">
-  <h2 class="mono text-sm tracking-widest mb-8 flex items-center gap-4">
-    <span class="text-[var(--accent)]">➜</span>
-    <span>cat about.txt</span>
-    <span class="flex-1 border-t border-dashed border-[var(--border)] opacity-50"></span>
-  </h2>
-  
-  <div class="grid grid-cols-1 lg:grid-cols-[2fr_1fr] gap-12 items-start">
-    <div>
-      <p class="text-lg leading-relaxed mb-8">
-        I'm a Computer Science student at Ontario Tech who likes working where software meets hardware: 
-        firmware, control loops, and the test systems that prove they're safe. Right now I'm building SIL 
-        test tooling at Rivian and VW, and leading the embedded team on Ontario Tech's Formula SAE electric car.
-      </p>
+<h2 id="about"><b>➜</b> cat about.txt</h2>
+
+<div class="about-section">
+  <div class="about-grid">
+    <div class="about-img" style="background-image:url(/headshot_f9b6.jpg)"></div>
+    <div class="about-text">
+      <p>I'm a computer science student at Ontario Tech University specializing in embedded systems and software testing. Currently working as a Software/Systems Engineer Intern at the Rivian and Volkswagen joint venture, where I build tools that bridge requirements and firmware testing.</p>
       
-      <div class="space-y-6">
-        <div>
-          <h3 class="mono text-sm font-medium mb-3 opacity-70">Languages</h3>
-          <div class="flex flex-wrap gap-2">
-            {["C", "C++", "Python", "Java", "JavaScript", "HTML/CSS"].map(skill => (
-              <span class="mono text-xs border border-[rgba(255,255,255,0.5)] px-3 py-1.5">
-                {skill}
-              </span>
-            ))}
-          </div>
-        </div>
-        
-        <div>
-          <h3 class="mono text-sm font-medium mb-3 opacity-70">Embedded</h3>
-          <div class="flex flex-wrap gap-2">
-            {["STM32", "ESP32", "Arduino", "Raspberry Pi", "RTOS", "CAN", "UART", "SPI", "I2C"].map(skill => (
-              <span class="mono text-xs border border-[rgba(255,255,255,0.5)] px-3 py-1.5">
-                {skill}
-              </span>
-            ))}
-          </div>
-        </div>
-        
-        <div>
-          <h3 class="mono text-sm font-medium mb-3 opacity-70">Testing & Tools</h3>
-          <div class="flex flex-wrap gap-2">
-            {["pytest", "Bazel", "CANoe", "Simulink", "MATLAB", "Git", "Linux", "WSL"].map(skill => (
-              <span class="mono text-xs border border-[rgba(255,255,255,0.5)] px-3 py-1.5">
-                {skill}
-              </span>
-            ))}
-          </div>
-        </div>
-        
-        <div>
-          <h3 class="mono text-sm font-medium mb-3 opacity-70">Web</h3>
-          <div class="flex flex-wrap gap-2">
-            {["Flask", "Firebase", "TypeScript", "REST APIs", "MQTT", "Modbus"].map(skill => (
-              <span class="mono text-xs border border-[rgba(255,255,255,0.5)] px-3 py-1.5">
-                {skill}
-              </span>
-            ))}
-          </div>
-        </div>
-      </div>
-    </div>
-    
-    <div class="flex justify-center lg:justify-end">
-      <img 
-        src="/jaspartap-photo.jpg" 
-        alt="Jaspartap Goomer, Computer Science student at Ontario Tech University"
-        class="w-full max-w-[400px] lg:max-w-none rounded-lg shadow-lg"
-        loading="lazy"
-      />
+      <p>At Ontario Tech Racing, I lead the embedded systems team building firmware for our Formula SAE electric car. The work spans everything from battery management to motor control, and I get to see it all come together on the track.</p>
+      
+      <p>I'm drawn to projects where software meets hardware—writing firmware that talks to sensors, building test infrastructure that catches bugs before they reach the track, and creating systems that need to work reliably in challenging conditions.</p>
+      
+      <p>When I'm not coding, you'll find me working on the FSAE car in the shop, debugging circuits on the bench, or learning about new embedded architectures.</p>
     </div>
   </div>
-</section>
+</div>
