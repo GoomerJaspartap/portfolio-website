@@ -6,70 +6,55 @@ const experiences = [
     when: "May 2026 – Present",
     location: "Vancouver, BC",
     bullets: [
-      "Built a Python agent on the Claude SDK that turns systems-engineering requirements in Jama into pytest test scripts, so test cases exist before the firmware does.",
-      "Kept requirements and tests in sync in both directions, so traceability held up as the requirements changed.",
-      "Built .so targets from embedded C with Bazel, validated them through Python SIL tests, and triaged the failures with the firmware engineers."
+      "Built a Python agent (Claude SDK) that converts Jama requirements into pytest test scripts before firmware exists.",
+      "Synchronized requirements and tests bidirectionally, maintaining traceability as requirements changed.",
+      "Used Bazel to build .so targets from embedded C source and validated them via Python/pytest-based SIL test scripts against system requirements."
     ],
-    tags: ["Python", "Claude SDK", "pytest", "Bazel", "SIL", "Jama"]
+    tags: ["Python", "Claude SDK", "pytest", "Bazel", "SIL"]
   },
   {
     role: "Embedded Systems Lead",
-    org: "Ontario Tech Racing (Formula SAE)",
+    org: "Ontario Tech Racing · Formula SAE",
     when: "Sept 2024 – Present",
     location: "Oshawa, ON",
     bullets: [
-      "Leads a 6-person embedded team and sets its coding standards, documentation and onboarding.",
-      "Built ECU firmware in Simulink (Stateflow and Embedded Coder): CAN-based throttle/brake control, custom DBCs, and shutdown-circuit safety logic.",
-      "Wrote BMS firmware in C/C++ for the ADI LTC6813-1 (isoSPI, cell voltage and temperature, fault handling, passive balancing), and verified it with pytest SIL tests and HIL benches."
+      "Lead a 6-member embedded team; ECU firmware in Simulink (Stateflow + Embedded Coder) with CAN throttle/brake control.",
+      "BMS firmware in C/C++ for ADI LTC6813-1, verified with pytest SIL tests and HIL benches."
     ],
-    tags: ["Simulink", "C/C++", "CAN", "CANoe", "pytest", "HIL"]
+    tags: ["Simulink", "C/C++", "CAN", "CANoe", "HIL"]
   },
   {
     role: "Engineering Student",
-    org: "Ontario Tech ACE (Automotive Centre of Excellence)",
+    org: "Ontario Tech ACE",
     when: "May 2025 – May 2026",
     location: "Oshawa, ON",
     bullets: [
-      "Built a diagnostic controller that checks temperature and humidity over Modbus TCP/IP and MQTT, with SMS and email alerts.",
-      "Built a Flask API and a real-time web dashboard for monitoring and control, and wrote the validation test plans."
+      "Diagnostic controller over Modbus TCP/IP and MQTT with SMS/email fault alerts.",
+      "Flask API and real-time web dashboard for monitoring and control."
     ],
-    tags: ["Python", "Flask", "Modbus", "MQTT"]
+    tags: ["Python", "Flask", "MQTT", "Modbus"]
   }
 ];
 ---
 
-<section id="experience" class="max-w-[1100px] mx-auto px-6 sm:px-10 py-16">
-  <h2 class="mono text-sm tracking-widest mb-8 flex items-center gap-4">
-    <span class="text-[var(--accent)]">➜</span>
-    <span>cat experience.log</span>
-    <span class="flex-1 border-t border-dashed border-[var(--border)] opacity-50"></span>
-  </h2>
-  
-  <div class="grid grid-cols-1 lg:grid-cols-3 border border-[rgba(255,255,255,0.8)]">
-    {experiences.map((exp, index) => (
-      <div class={`p-6 lg:p-8 ${index < experiences.length - 1 ? 'border-b lg:border-b-0 lg:border-r border-[rgba(255,255,255,0.8)]' : ''}`}>
-        <div class="mono text-xs opacity-70 mb-2">{exp.when} · {exp.location}</div>
-        
-        <h3 class="text-xl font-semibold mb-1 mono">
-          <span class="text-[var(--accent)]">$ </span>{exp.role}
-        </h3>
-        
-        <div class="text-[#9FD3FF] text-sm mb-4">{exp.org}</div>
-        
-        <ul class="space-y-2 mb-6">
-          {exp.bullets.map(bullet => (
-            <li class="text-sm opacity-90 leading-relaxed">{bullet}</li>
-          ))}
-        </ul>
-        
-        <div class="flex flex-wrap gap-2">
-          {exp.tags.map(tag => (
-            <span class="mono text-xs border border-[rgba(255,255,255,0.5)] px-2 py-1">
-              {tag}
-            </span>
-          ))}
-        </div>
+<h2><b>➜</b> cat experience.log</h2>
+
+<div class="exps">
+  {experiences.map(exp => (
+    <div class="exp">
+      <div class="when">{exp.when} · {exp.location}</div>
+      <h3>{exp.role}</h3>
+      <div class="org">{exp.org}</div>
+      <ul>
+        {exp.bullets.map(bullet => (
+          <li>{bullet}</li>
+        ))}
+      </ul>
+      <div class="tags">
+        {exp.tags.map(tag => (
+          <span class="tag">{tag}</span>
+        ))}
       </div>
-    ))}
-  </div>
-</section>
+    </div>
+  ))}
+</div>

@@ -1,227 +1,88 @@
 ---
-import { Image } from 'astro:assets';
 ---
 
-<section id="projects" class="max-w-[1100px] mx-auto px-6 sm:px-10 py-16">
-  <h2 class="mono text-sm tracking-widest mb-8 flex items-center gap-4">
-    <span class="text-[var(--accent)]">➜</span>
-    <span>ls ./projects</span>
-    <span class="flex-1 border-t border-dashed border-[var(--border)] opacity-50"></span>
-  </h2>
-  
-  <!-- Featured BMS Project -->
-  <div class="border border-[rgba(255,255,255,0.8)] mb-8 bg-[rgba(7,31,59,0.6)] dark:bg-[rgba(7,31,59,0.6)]">
-    <div class="grid grid-cols-1 lg:grid-cols-[1.1fr_1fr]">
-      <!-- Gallery -->
-      <div class="grid grid-cols-[2fr_1fr] grid-rows-3 gap-[1.5px] bg-[rgba(255,255,255,0.8)] border-b lg:border-b-0 lg:border-r border-[rgba(255,255,255,0.8)] min-h-[340px] lg:min-h-[470px]">
-        <div class="row-span-3 overflow-hidden">
-          <img 
-            src="/bms4_8e2d.jpg" 
-            alt="Battery Management System circuit board mounted on battery pack showing LTC6813 chip and associated circuitry"
-            class="w-full h-full object-cover grayscale brightness-110 sepia saturate-[2.2] hue-rotate-[170deg] mix-blend-screen"
-            loading="lazy"
-          />
-        </div>
-        <div class="overflow-hidden">
-          <img 
-            src="/bms2_dae8.jpg" 
-            alt="Close-up view of BMS board showing isoSPI transceiver and voltage measurement components"
-            class="w-full h-full object-cover grayscale brightness-110 sepia saturate-[2.2] hue-rotate-[170deg] mix-blend-screen"
-            loading="lazy"
-          />
-        </div>
-        <div class="overflow-hidden">
-          <img 
-            src="/bms3_3e09.jpg" 
-            alt="BMS board detail showing passive cell balancing circuitry and thermal management"
-            class="w-full h-full object-cover grayscale brightness-110 sepia saturate-[2.2] hue-rotate-[170deg] mix-blend-screen"
-            loading="lazy"
-          />
-        </div>
-        <div class="overflow-hidden">
-          <img 
-            src="/bms1_6bb6.jpg" 
-            alt="Full view of BMS board installation on Formula SAE electric vehicle battery pack"
-            class="w-full h-full object-cover grayscale brightness-110 sepia saturate-[2.2] hue-rotate-[170deg] mix-blend-screen"
-            loading="lazy"
-          />
-        </div>
-      </div>
-      
-      <!-- Content -->
-      <div class="p-6 lg:p-8">
-        <div class="mono text-xs tracking-widest text-[var(--accent)] mb-2">FEATURED · FIG. 01</div>
-        <h3 class="text-2xl lg:text-3xl font-medium mono mb-1">
-          <span class="text-[var(--accent)]">./</span>Battery Management System Firmware
-        </h3>
-        <div class="text-[#9FD3FF] text-sm mb-4">Ontario Tech Racing · Formula SAE electric car</div>
-        
-        <p class="opacity-90 mb-4 leading-relaxed">
-          Firmware for the Analog Devices LTC6813-1 battery monitor that keeps the car's high-voltage pack safe. 
-          I wrote it, then debugged and tested it on the bench and on the real pack.
-        </p>
-        
-        <ul class="space-y-2 mb-6">
-          <li class="text-sm pl-5 relative">
-            <span class="absolute left-0 text-[var(--accent)]">▸</span>
-            Cell voltage and temperature monitoring across the pack
-          </li>
-          <li class="text-sm pl-5 relative">
-            <span class="absolute left-0 text-[var(--accent)]">▸</span>
-            Passive cell balancing
-          </li>
-          <li class="text-sm pl-5 relative">
-            <span class="absolute left-0 text-[var(--accent)]">▸</span>
-            Fault detection and error handling
-          </li>
-          <li class="text-sm pl-5 relative">
-            <span class="absolute left-0 text-[var(--accent)]">▸</span>
-            Microcontroller talks SPI through a transceiver that converts it to isoSPI
-          </li>
-          <li class="text-sm pl-5 relative">
-            <span class="absolute left-0 text-[var(--accent)]">▸</span>
-            Pack telemetry sent over CAN
-          </li>
-          <li class="text-sm pl-5 relative">
-            <span class="absolute left-0 text-[var(--accent)]">▸</span>
-            Verified with pytest SIL tests and bench HIL setups
-          </li>
-        </ul>
-        
-        <div class="flex flex-wrap gap-2 mb-6">
-          {["C/C++", "LTC6813-1", "isoSPI", "SPI", "CAN", "pytest", "HIL"].map(tag => (
-            <span class="mono text-xs border border-[rgba(255,255,255,0.5)] px-2 py-1">
-              {tag}
-            </span>
-          ))}
-        </div>
-        
-        <a 
-          href="/projects/bms" 
-          class="inline-block text-sm border border-[var(--text-light)] px-4 py-2 hover:bg-[var(--text-light)] hover:text-[var(--bg-dark)] transition-all"
-        >
-          View Case Study →
-        </a>
+<h2><b>➜</b> ls ./projects</h2>
+
+<!-- Featured BMS -->
+<div class="feat">
+  <div class="gal">
+    <div class="img g1" style="background-image:url(/bms4_8e2d.jpg)"></div>
+    <div class="img g2" style="background-image:url(/bms2_dae8.jpg)"></div>
+    <div class="img g3" style="background-image:url(/bms3_3e09.jpg)"></div>
+    <div class="img g4" style="background-image:url(/bms1_6bb6.jpg)"></div>
+  </div>
+  <div class="fb">
+    <div class="flag">FEATURED · FIG. 01</div>
+    <h3>./Battery Management System Firmware</h3>
+    <div class="org">Ontario Tech Racing · Formula SAE electric car</div>
+    <p>Firmware for the Analog Devices LTC6813-1 battery monitor that keeps the car's high-voltage pack safe. I wrote it, then debugged and tested it on the bench and on the real pack.</p>
+    <ul>
+      <li>Cell voltage and temperature monitoring across the pack</li>
+      <li>Passive cell balancing</li>
+      <li>Fault detection and error handling</li>
+      <li>Microcontroller talks SPI through a transceiver that converts it to isoSPI</li>
+      <li>Pack telemetry sent over CAN</li>
+      <li>Verified with pytest SIL tests and bench HIL setups</li>
+    </ul>
+    <div class="tags">
+      {["C/C++", "LTC6813-1", "isoSPI", "SPI", "CAN", "pytest", "HIL"].map(tag => (
+        <span class="tag">{tag}</span>
+      ))}
+    </div>
+  </div>
+</div>
+
+<!-- Other Projects Grid -->
+<div class="grid">
+  <div class="proj">
+    <div class="img" style="background-image:url(/OTR-DASH.png)"></div>
+    <div class="pb">
+      <h3>FSAE Car Telemetry</h3>
+      <p>On-car ESP32 + HMI dashboard reading the ECU over CAN, plus Firebase + TypeScript cloud telemetry.</p>
+      <div class="tags">
+        {["ESP32", "CAN", "Firebase", "TypeScript"].map(tag => (
+          <span class="tag">{tag}</span>
+        ))}
       </div>
     </div>
   </div>
-  
-  <!-- Other Projects Grid -->
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-    <!-- FSAE Car Telemetry -->
-    <div class="border border-[rgba(255,255,255,0.8)] bg-[rgba(7,31,59,0.5)] dark:bg-[rgba(7,31,59,0.5)]">
-      <div class="grid grid-cols-1 sm:grid-cols-[220px_1fr]">
-        <div class="h-48 sm:h-auto sm:min-h-[170px] overflow-hidden border-b sm:border-b-0 sm:border-r border-[rgba(255,255,255,0.8)]">
-          <img 
-            src="/OTR-DASH.png" 
-            alt="Formula SAE car dashboard showing real-time telemetry display with speed, torque, and battery data"
-            class="w-full h-full object-cover grayscale brightness-110 sepia saturate-[2.2] hue-rotate-[170deg] mix-blend-screen"
-            loading="lazy"
-          />
-        </div>
-        <div class="p-5">
-          <h3 class="text-lg font-medium mono mb-2">
-            <span class="text-[var(--accent)]">./</span>FSAE Car Telemetry
-          </h3>
-          <p class="text-sm opacity-85 mb-4 leading-relaxed">
-            On-car ESP32 + HMI dashboard reading the ECU over CAN, plus Firebase + TypeScript cloud telemetry.
-          </p>
-          <div class="flex flex-wrap gap-2">
-            {["ESP32", "CAN", "Firebase", "TypeScript"].map(tag => (
-              <span class="mono text-xs border border-[rgba(255,255,255,0.5)] px-2 py-1">
-                {tag}
-              </span>
-            ))}
-          </div>
-        </div>
-      </div>
-    </div>
-    
-    <!-- ECU & BMS Simulation -->
-    <div class="border border-[rgba(255,255,255,0.8)] bg-[rgba(7,31,59,0.5)] dark:bg-[rgba(7,31,59,0.5)]">
-      <div class="grid grid-cols-1 sm:grid-cols-[220px_1fr]">
-        <div class="h-48 sm:h-auto sm:min-h-[170px] overflow-hidden border-b sm:border-b-0 sm:border-r border-[rgba(255,255,255,0.8)]">
-          <img 
-            src="/ECU.png" 
-            alt="Simulink model showing ECU and BMS behavioral logic for software-in-the-loop testing"
-            class="w-full h-full object-cover grayscale brightness-110 sepia saturate-[2.2] hue-rotate-[170deg] mix-blend-screen"
-            loading="lazy"
-          />
-        </div>
-        <div class="p-5">
-          <h3 class="text-lg font-medium mono mb-2">
-            <span class="text-[var(--accent)]">./</span>ECU & BMS Simulation
-          </h3>
-          <p class="text-sm opacity-85 mb-4 leading-relaxed">
-            Behavioral Simulink models for virtual testing, SIL validation and early fault discovery.
-          </p>
-          <div class="flex flex-wrap gap-2">
-            {["Simulink", "SIL", "Stateflow"].map(tag => (
-              <span class="mono text-xs border border-[rgba(255,255,255,0.5)] px-2 py-1">
-                {tag}
-              </span>
-            ))}
-          </div>
-        </div>
-      </div>
-    </div>
-    
-    <!-- Reflow Oven Controller -->
-    <div class="border border-[rgba(255,255,255,0.8)] bg-[rgba(7,31,59,0.5)] dark:bg-[rgba(7,31,59,0.5)]">
-      <div class="grid grid-cols-1 sm:grid-cols-[220px_1fr]">
-        <div class="h-48 sm:h-auto sm:min-h-[170px] overflow-hidden border-b sm:border-b-0 sm:border-r border-[rgba(255,255,255,0.8)]">
-          <img 
-            src="/ReflowOven.png" 
-            alt="Reflow oven controller with Nextion HMI display showing temperature control interface"
-            class="w-full h-full object-cover grayscale brightness-110 sepia saturate-[2.2] hue-rotate-[170deg] mix-blend-screen"
-            loading="lazy"
-          />
-        </div>
-        <div class="p-5">
-          <h3 class="text-lg font-medium mono mb-2">
-            <span class="text-[var(--accent)]">./</span>Reflow Oven Controller
-          </h3>
-          <p class="text-sm opacity-85 mb-4 leading-relaxed">
-            STM32 control holding ±3°C with a Nextion HMI and ESP32 REST remote control.
-          </p>
-          <div class="flex flex-wrap gap-2">
-            {["STM32", "UART/SPI/I2C", "ESP32"].map(tag => (
-              <span class="mono text-xs border border-[rgba(255,255,255,0.5)] px-2 py-1">
-                {tag}
-              </span>
-            ))}
-          </div>
-        </div>
-      </div>
-    </div>
-    
-    <!-- Computer Vision Camera Gimbal -->
-    <div class="border border-[rgba(255,255,255,0.8)] bg-[rgba(7,31,59,0.5)] dark:bg-[rgba(7,31,59,0.5)]">
-      <div class="grid grid-cols-1 sm:grid-cols-[220px_1fr]">
-        <div class="h-48 sm:h-auto sm:min-h-[170px] overflow-hidden border-b sm:border-b-0 sm:border-r border-[rgba(255,255,255,0.8)]">
-          <img 
-            src="/CameraGimbal.png" 
-            alt="Two-axis camera gimbal system with servo motors for automated face tracking"
-            class="w-full h-full object-cover grayscale brightness-110 sepia saturate-[2.2] hue-rotate-[170deg] mix-blend-screen"
-            loading="lazy"
-          />
-        </div>
-        <div class="p-5">
-          <h3 class="text-lg font-medium mono mb-2">
-            <span class="text-[var(--accent)]">./</span>CV Camera Gimbal
-          </h3>
-          <p class="text-sm opacity-85 mb-4 leading-relaxed">
-            YOLO + OpenCV face tracking driving a 2-axis gimbal through a PID loop over UART.
-          </p>
-          <div class="flex flex-wrap gap-2">
-            {["Python", "YOLO", "OpenCV", "PID"].map(tag => (
-              <span class="mono text-xs border border-[rgba(255,255,255,0.5)] px-2 py-1">
-                {tag}
-              </span>
-            ))}
-          </div>
-        </div>
+
+  <div class="proj">
+    <div class="img" style="background-image:url(/ECU.png)"></div>
+    <div class="pb">
+      <h3>ECU & BMS Simulation</h3>
+      <p>Behavioural Simulink models for virtual testing, SIL validation and early fault discovery.</p>
+      <div class="tags">
+        {["Simulink", "SIL", "Stateflow"].map(tag => (
+          <span class="tag">{tag}</span>
+        ))}
       </div>
     </div>
   </div>
-</section>
+
+  <div class="proj">
+    <div class="img" style="background-image:url(/ReflowOven.png)"></div>
+    <div class="pb">
+      <h3>Reflow Oven Controller</h3>
+      <p>STM32 control holding ±3°C with a Nextion HMI and ESP32 REST remote control.</p>
+      <div class="tags">
+        {["STM32", "UART/SPI/I2C", "ESP32"].map(tag => (
+          <span class="tag">{tag}</span>
+        ))}
+      </div>
+    </div>
+  </div>
+
+  <div class="proj">
+    <div class="img" style="background-image:url(/CameraGimbal.png)"></div>
+    <div class="pb">
+      <h3>CV Camera Gimbal</h3>
+      <p>YOLO + OpenCV face tracking driving a 2-axis gimbal through a PID loop over UART.</p>
+      <div class="tags">
+        {["Python", "YOLO", "OpenCV", "PID"].map(tag => (
+          <span class="tag">{tag}</span>
+        ))}
+      </div>
+    </div>
+  </div>
+</div>

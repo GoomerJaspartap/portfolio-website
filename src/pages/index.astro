@@ -4,9 +4,6 @@ import Navigation from '../components/Navigation.astro';
 import Hero from '../components/Hero.astro';
 import Experience from '../components/Experience.astro';
 import Projects from '../components/Projects.astro';
-import About from '../components/About.astro';
-import Contact from '../components/Contact.astro';
-import Footer from '../components/Footer.astro';
 ---
 
 <Layout 
@@ -14,10 +11,9 @@ import Footer from '../components/Footer.astro';
   description="CS student at Ontario Tech University. Software/Systems Engineer Intern at Rivian and VW. Embedded firmware, Simulink, CAN, SIL/HIL testing."
 >
   <Navigation />
-  <Hero />
-  <Experience />
-  <Projects />
-  <About />
-  <Contact />
-  <Footer />
+  <div class="wrap">
+    <Hero />
+    <Experience />
+    <Projects />
+  </div>
 </Layout>
