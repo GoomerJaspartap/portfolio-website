@@ -7,19 +7,16 @@ const lastUpdated = new Date().toLocaleDateString('en-US', { year: 'numeric', mo
 
 <Layout 
   title="Battery Management System Firmware | Jaspartap Goomer"
-  description="Firmware development for the Analog Devices LTC6813-1 BMS for Ontario Tech Racing's Formula SAE electric car. Cell monitoring, balancing, and safety features."
+  description="LTC6813 firmware for Ontario Tech Racing's Formula SAE car: cell voltage and temperature, passive balancing, fault handling, and CAN telemetry."
 >
   <Navigation />
   
-  <div class="wrap" style="max-width:900px">
-    <!-- Header -->
+  <div class="wrap case-wrap">
     <div style="margin:40px 0 30px">
-      <a href="/#projects" class="btn" style="margin-left:0">← Back to Projects</a>
+      <a href="/#projects" class="btn case-back">← Back to Projects</a>
       
       <div class="flag" style="margin-top:20px">CASE STUDY · FIG. 01</div>
-      <h1 style="font-family:'IBM Plex Mono';font-weight:500;font-size:36px;margin:8px 0 12px">
-        Battery Management System Firmware
-      </h1>
+      <h1 class="case-title">Battery Management System Firmware</h1>
       <div class="org" style="font-size:16px;margin-bottom:14px">
         Ontario Tech Racing · Formula SAE Electric Car
       </div>
@@ -31,21 +28,18 @@ const lastUpdated = new Date().toLocaleDateString('en-US', { year: 'numeric', mo
       </div>
     </div>
     
-    <!-- Hero Video -->
-    <div style="margin-bottom:40px;border:1.5px solid rgba(255,255,255,.8);background:#071F3B">
+    <div class="case-video">
       <video 
         autoplay 
         muted 
         loop 
         playsinline
         poster="/bms-loop-poster_7f81.jpg"
-        style="width:100%;max-width:100%;display:block"
       >
         <source src="/bms-loop_7208.mp4" type="video/mp4" />
       </video>
     </div>
     
-    <!-- Overview -->
     <section style="margin-bottom:50px">
       <h2><b>➜</b> cat overview.txt</h2>
       
@@ -62,7 +56,6 @@ const lastUpdated = new Date().toLocaleDateString('en-US', { year: 'numeric', mo
       </div>
     </section>
     
-    <!-- Implementation -->
     <section style="margin-bottom:50px">
       <h2><b>➜</b> cat implementation.txt</h2>
       
@@ -97,51 +90,30 @@ const lastUpdated = new Date().toLocaleDateString('en-US', { year: 'numeric', mo
       </div>
     </section>
     
-    <!-- Hardware Gallery -->
     <section style="margin-bottom:50px">
       <h2><b>➜</b> ls ./hardware</h2>
       
       <div class="case-gallery">
         <div class="case-img-wrap">
-          <img 
-            src="/bms4_8e2d.jpg" 
-            alt="BMS board on the pack"
-            loading="lazy"
-          />
+          <img src="/bms4_8e2d.jpg" alt="BMS board on the pack" width="1200" height="900" loading="lazy" />
           <div class="case-caption">BMS board on the pack</div>
         </div>
-        
         <div class="case-img-wrap">
-          <img 
-            src="/bms2_dae8.jpg" 
-            alt="BMS board detail"
-            loading="lazy"
-          />
+          <img src="/bms2_dae8.jpg" alt="BMS board detail" width="1200" height="900" loading="lazy" />
           <div class="case-caption">BMS board detail</div>
         </div>
-        
         <div class="case-img-wrap">
-          <img 
-            src="/bms3_3e09.jpg" 
-            alt="BMS circuitry"
-            loading="lazy"
-          />
-          <div class="case-caption">BMS circuitry</div>
+          <img src="/bms3_3e09.jpg" alt="BMS board on the pack" width="1200" height="900" loading="lazy" />
+          <div class="case-caption">BMS board on the pack</div>
         </div>
-        
         <div class="case-img-wrap">
-          <img 
-            src="/bms1_6bb6.jpg" 
-            alt="BMS installation"
-            loading="lazy"
-          />
-          <div class="case-caption">BMS installation</div>
+          <img src="/bms1_6bb6.jpg" alt="BMS board detail" width="1200" height="900" loading="lazy" />
+          <div class="case-caption">BMS board detail</div>
         </div>
       </div>
     </section>
     
-    <!-- Back link -->
-    <div style="text-align:center;padding:40px 0 80px;border-top:1.5px solid rgba(255,255,255,.8)">
+    <div class="case-end">
       <a href="/#projects" class="btn">← Back to All Projects</a>
     </div>
   </div>
@@ -151,82 +123,12 @@ const lastUpdated = new Date().toLocaleDateString('en-US', { year: 'numeric', mo
       © 2026 Jaspartap Goomer · Built with <a href="https://astro.build" target="_blank" rel="noopener noreferrer">Astro</a> · Last updated {lastUpdated}
     </div>
   </footer>
+  <script>
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      document.querySelectorAll('video').forEach((video) => {
+        video.removeAttribute('autoplay');
+        video.pause();
+      });
+    }
+  </script>
 </Layout>
-
-<style>
-  .case-content {
-    border: 1.5px solid rgba(255,255,255,.8);
-    background: rgba(7,31,59,.5);
-    padding: 28px;
-  }
-  
-  .case-content p {
-    opacity: .92;
-    line-height: 1.65;
-    margin-bottom: 18px;
-  }
-  
-  .case-content p:last-child {
-    margin-bottom: 0;
-  }
-  
-  .case-content h3 {
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 16px;
-    font-weight: 500;
-    margin: 28px 0 10px;
-    color: #9FD3FF;
-  }
-  
-  .case-content h3:first-child {
-    margin-top: 0;
-  }
-  
-  .case-gallery {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-  }
-  
-  .case-img-wrap {
-    border: 1.5px solid rgba(255,255,255,.8);
-    background: rgba(7,31,59,.5);
-    overflow: hidden;
-  }
-  
-  .case-img-wrap img {
-    width: 100%;
-    aspect-ratio: 4/3;
-    object-fit: cover;
-    display: block;
-    filter: grayscale(1) brightness(1.1) sepia(1) hue-rotate(170deg) saturate(2.2);
-    mix-blend-mode: screen;
-  }
-  
-  .case-caption {
-    padding: 12px 16px;
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 12px;
-    opacity: .8;
-  }
-  
-  @media (max-width: 640px) {
-    .case-gallery {
-      grid-template-columns: 1fr;
-    }
-    
-    .case-content {
-      padding: 20px;
-    }
-    
-    video {
-      max-width: 100%;
-    }
-  }
-  
-  @media (prefers-reduced-motion: reduce) {
-    video[autoplay] {
-      autoplay: false;
-    }
-  }
-</style>
