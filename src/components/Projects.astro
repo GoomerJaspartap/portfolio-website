@@ -33,13 +33,13 @@ const gimbalImg = await getImage({ src: gimbal, format: 'webp', width: 640 });
     <div class="flag">FEATURED · FIG. 01</div>
     <h3>./Battery Management System Firmware</h3>
     <div class="org">Ontario Tech Racing · Formula SAE electric car</div>
-    <p>Firmware for the Analog Devices LTC6813-1 battery monitor that keeps the car's high-voltage pack safe. I wrote it, then debugged and tested it on the bench and on the real pack.</p>
+    <p>Firmware for the Analog Devices LTC6813-1 battery monitor that keeps the car's high-voltage pack safe. I wrote it, then debugged and tested it on the bench.</p>
     <ul>
       <li>Cell voltage and temperature monitoring across the pack</li>
       <li>Passive cell balancing</li>
       <li>Fault detection and error handling</li>
       <li>Microcontroller talks SPI through a transceiver that converts it to isoSPI</li>
-      <li>Pack telemetry sent over CAN</li>
+      <li>Telemetry over CAN</li>
       <li>Verified with pytest SIL tests and bench HIL setups</li>
     </ul>
     <div class="tags">
