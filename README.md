@@ -4,7 +4,7 @@ Personal site for Jaspartap Goomer, a computer science student at Ontario Tech U
 
 ## Requirements
 
-Node.js **22.12.0 or newer**. `package.json` sets `engines.node` to `>=22.12.0`. The GitHub Actions workflow installs Node 22 (current 22.x), not Node 20.
+Node.js **22.x**. `package.json` sets `engines.node` to `22.x` so Vercel deploys the latest Node 22, not the current default (24.x). An open range such as `>=22.12.0` is treated as the latest 24.x.
 
 ## Run locally
 
@@ -27,8 +27,8 @@ npm run preview
 
 ## Deploy
 
-`.github/workflows/deploy.yml` runs on pushes to `master`. It installs dependencies with `npm ci`, builds with `npm run build`, and deploys `dist/` to GitHub Pages.
+The site is deployed on [Vercel](https://vercel.com) from this repo. `vercel.json` sets the framework to Astro, the build command to `npm run build`, and the output directory to `dist`. There is no GitHub Pages workflow.
 
-The live site still publishes the files at the root of `master` (`index.html`, `style.css`, `script.js`, and `img/`) until GitHub Pages is switched to the **GitHub Actions** source. Those root files, and the root `CNAME`, stay in this branch so merging does not blank the current site. After the source is switched to Actions, the workflow output is what visitors get.
+The production branch in the Vercel project must be `master`. This repo also has an old `main` branch, and Vercel will keep publishing that branch if production is still pointed at it. Confirm the production branch in the Vercel dashboard (Project Settings → Git → Production Branch).
 
-`public/CNAME` is copied into `dist/` and keeps the custom domain `www.jaspartapgoomer.com`.
+The custom domain `www.jaspartapgoomer.com` is configured in the Vercel project. This repo does not include a `CNAME` file; Vercel does not use one.
