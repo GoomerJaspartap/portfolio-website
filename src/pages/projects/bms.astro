@@ -1,0 +1,133 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navigation from '../../components/Navigation.astro';
+import { getImage } from 'astro:assets';
+import bms1 from '../../assets/bms1.jpg';
+import bms2 from '../../assets/bms2.jpg';
+import bms3 from '../../assets/bms3.jpg';
+import bms4 from '../../assets/bms4.jpg';
+
+const shots = await Promise.all([
+  getImage({ src: bms4, format: 'webp', width: 1200 }),
+  getImage({ src: bms2, format: 'webp', width: 1200 }),
+  getImage({ src: bms3, format: 'webp', width: 1200 }),
+  getImage({ src: bms1, format: 'webp', width: 1200 }),
+]);
+const [shot4, shot2, shot3, shot1] = shots;
+
+const lastUpdated = new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+---
+
+<Layout 
+  title="Battery Management System Firmware | Jaspartap Goomer"
+  description="LTC6813 firmware for Ontario Tech Racing's Formula SAE car: cell voltage and temperature, passive balancing, fault handling, and CAN telemetry."
+>
+  <Navigation />
+  
+  <div class="wrap case-wrap">
+    <div style="margin:40px 0 30px">
+      <a href="/#projects" class="btn case-back">← Back to Projects</a>
+      
+      <div class="flag" style="margin-top:20px">CASE STUDY · FIG. 01</div>
+      <h1 class="case-title">Battery Management System Firmware</h1>
+      <div class="org" style="font-size:16px;margin-bottom:14px">
+        Ontario Tech Racing · Formula SAE Electric Car
+      </div>
+      
+      <div class="tags">
+        {["C/C++", "LTC6813-1", "isoSPI", "SPI", "CAN", "pytest", "HIL"].map(tag => (
+          <span class="tag">{tag}</span>
+        ))}
+      </div>
+    </div>
+    
+    <div class="case-video">
+      <video 
+        autoplay 
+        muted 
+        loop 
+        playsinline
+        poster="/bms-loop-poster_7f81.jpg"
+      >
+        <source src="/bms-loop_7208.mp4" type="video/mp4" />
+      </video>
+    </div>
+    
+    <section style="margin-bottom:50px">
+      <h2><b>➜</b> cat overview.txt</h2>
+      
+      <div class="case-content">
+        <p>
+          Firmware for the Analog Devices LTC6813-1 on Ontario Tech Racing's Formula SAE car.
+        </p>
+        <p>
+          It monitors cell voltage and temperature, balances cells passively, and handles faults and errors.
+        </p>
+      </div>
+    </section>
+    
+    <section style="margin-bottom:50px">
+      <h2><b>➜</b> cat implementation.txt</h2>
+      
+      <div class="case-content">
+        <h3>Cell voltage and temperature</h3>
+        <p>
+          The microcontroller talks SPI to an isoSPI transceiver, which carries isoSPI to the LTC6813.
+        </p>
+        
+        <h3>Passive cell balancing</h3>
+        <p>Passive cell balancing for the pack.</p>
+        
+        <h3>Fault and error handling</h3>
+        <p>Fault and error handling in the firmware.</p>
+        
+        <h3>Telemetry over CAN</h3>
+        <p>Pack telemetry is sent over CAN.</p>
+        
+        <h3>Debugging and testing</h3>
+        <p>Debugged and tested with pytest SIL tests and HIL benches.</p>
+      </div>
+    </section>
+    
+    <section style="margin-bottom:50px">
+      <h2><b>➜</b> ls ./hardware</h2>
+      
+      <div class="case-gallery">
+        <div class="case-img-wrap">
+          <img src={shot4.src} alt="BMS board on the pack" width="1200" height="900" />
+          <div class="case-caption">BMS board on the pack</div>
+        </div>
+        <div class="case-img-wrap">
+          <img src={shot2.src} alt="BMS board detail" width="1200" height="900" />
+          <div class="case-caption">BMS board detail</div>
+        </div>
+        <div class="case-img-wrap">
+          <img src={shot3.src} alt="BMS board on the pack" width="1200" height="900" />
+          <div class="case-caption">BMS board on the pack</div>
+        </div>
+        <div class="case-img-wrap">
+          <img src={shot1.src} alt="BMS board detail" width="1200" height="900" />
+          <div class="case-caption">BMS board detail</div>
+        </div>
+      </div>
+    </section>
+    
+    <div class="case-end">
+      <a href="/#projects" class="btn">← Back to All Projects</a>
+    </div>
+  </div>
+  
+  <footer>
+    <div class="wrap">
+      © 2026 Jaspartap Goomer · Built with <a href="https://astro.build" target="_blank" rel="noopener noreferrer">Astro</a> · Last updated {lastUpdated}
+    </div>
+  </footer>
+  <script>
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      document.querySelectorAll('video').forEach((video) => {
+        video.removeAttribute('autoplay');
+        video.pause();
+      });
+    }
+  </script>
+</Layout>

@@ -1,0 +1,60 @@
+---
+const experiences = [
+  {
+    role: "Software/Systems Engineer Intern",
+    org: "Rivian and Volkswagen Group Technologies",
+    when: "May 2026 – Present",
+    location: "Vancouver, BC",
+    bullets: [
+      "Built a Python agent (Claude SDK) that converts Jama requirements into pytest test scripts before firmware exists.",
+      "Synchronized requirements and tests bidirectionally, maintaining traceability as requirements changed.",
+      "Used Bazel to build .so targets from embedded C source and validated them via Python/pytest-based SIL test scripts against system requirements."
+    ],
+    tags: ["Python", "Claude SDK", "pytest", "Bazel", "SIL"]
+  },
+  {
+    role: "Embedded Systems Lead",
+    org: "Ontario Tech Racing · Formula SAE",
+    when: "Sept 2024 – Present",
+    location: "Oshawa, ON",
+    bullets: [
+      "Lead a 6-member embedded team; ECU firmware in Simulink (Stateflow + Embedded Coder) with CAN throttle/brake control.",
+      "BMS firmware in C/C++ for ADI LTC6813-1, verified with pytest SIL tests and HIL benches."
+    ],
+    tags: ["Simulink", "C/C++", "CAN", "CANoe", "HIL"]
+  },
+  {
+    role: "Engineering Student",
+    org: "Ontario Tech ACE",
+    when: "May 2025 – May 2026",
+    location: "Oshawa, ON",
+    bullets: [
+      "Diagnostic controller over Modbus TCP/IP and MQTT with SMS/email fault alerts.",
+      "Flask API and real-time web dashboard for monitoring and control."
+    ],
+    tags: ["Python", "Flask", "MQTT", "Modbus"]
+  }
+];
+---
+
+<h2 id="experience"><b>➜</b> cat experience.log</h2>
+
+<div class="exps">
+  {experiences.map(exp => (
+    <div class="exp">
+      <div class="when">{exp.when} · {exp.location}</div>
+      <h3>{exp.role}</h3>
+      <div class="org">{exp.org}</div>
+      <ul>
+        {exp.bullets.map(bullet => (
+          <li>{bullet}</li>
+        ))}
+      </ul>
+      <div class="tags">
+        {exp.tags.map(tag => (
+          <span class="tag">{tag}</span>
+        ))}
+      </div>
+    </div>
+  ))}
+</div>

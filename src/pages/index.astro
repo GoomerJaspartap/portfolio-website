@@ -1,0 +1,30 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navigation from '../components/Navigation.astro';
+import Hero from '../components/Hero.astro';
+import Experience from '../components/Experience.astro';
+import Projects from '../components/Projects.astro';
+import About from '../components/About.astro';
+import Contact from '../components/Contact.astro';
+
+const lastUpdated = new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+---
+
+<Layout 
+  title="Jaspartap Goomer | Embedded & Systems Software Engineer"
+  description="CS student at Ontario Tech University. Software/Systems Engineer Intern at Rivian and VW. Embedded firmware, Simulink, CAN, SIL/HIL testing."
+>
+  <Navigation />
+  <div class="wrap">
+    <Hero />
+    <Experience />
+    <Projects />
+    <About />
+    <Contact />
+  </div>
+  <footer>
+    <div class="wrap">
+      © 2026 Jaspartap Goomer · Built with <a href="https://astro.build" target="_blank" rel="noopener noreferrer">Astro</a> · Last updated {lastUpdated}
+    </div>
+  </footer>
+</Layout>
