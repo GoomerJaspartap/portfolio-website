@@ -648,13 +648,21 @@ footer a:hover {
 .case-video {
   margin-bottom: 40px;
   border: 1.5px solid rgba(255,255,255,.8);
-  background: #071F3B;
+  background: #071F3B url("/bms-loop-poster_7f81.jpg") center / cover no-repeat;
+  height: 70vh;
+  max-height: 70vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .case-video video {
   width: 100%;
-  max-width: 100%;
-  height: auto;
+  height: 70vh;
+  max-height: 70vh;
+  object-fit: cover;
+  object-position: center;
   display: block;
 }
 
@@ -729,9 +737,6 @@ footer a:hover {
   }
   .case-content {
     padding: 20px;
-  }
-  .case-video video {
-    max-width: 100%;
   }
 }
 
