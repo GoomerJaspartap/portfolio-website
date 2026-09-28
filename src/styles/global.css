@@ -700,6 +700,7 @@ footer a:hover {
 
 .case-img-wrap img {
   width: 100%;
+  height: auto;
   max-width: 100%;
   aspect-ratio: 4 / 3;
   object-fit: cover;
@@ -737,5 +738,29 @@ footer a:hover {
 @media (prefers-reduced-motion: reduce) {
   .cur {
     animation: none;
+  }
+}
+
+/* These follow the base About/Contact rules so they actually win on small screens. */
+@media (max-width: 1024px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+  .about-img {
+    width: 100%;
+    max-width: 100%;
+    height: 320px;
+    min-height: 0;
+    border-left: 0;
+    border-top: 1.5px solid rgba(255,255,255,.8);
+  }
+}
+
+@media (max-width: 640px) {
+  .about-img {
+    height: 280px;
+  }
+  .contact-email {
+    font-size: 22px;
   }
 }
