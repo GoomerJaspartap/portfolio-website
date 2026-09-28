@@ -4,7 +4,7 @@ Personal site for Jaspartap Goomer, a computer science student at Ontario Tech U
 
 ## Requirements
 
-Node.js **22.12.0 or newer**. `package.json` sets `engines.node` to `>=22.12.0`. The GitHub Actions workflow installs Node 22 (current 22.x), not Node 20.
+Node.js **22.x**. `package.json` sets `engines.node` to `22.x` so Vercel deploys the latest Node 22, not the current default (24.x). An open range such as `>=22.12.0` is treated as the latest 24.x.
 
 ## Run locally
 
